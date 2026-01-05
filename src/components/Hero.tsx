@@ -23,25 +23,29 @@ export function Hero() {
             <h1 className="text-[32px] md:text-[38px] lg:text-[42px] font-bold text-[var(--text-dark)] leading-[1.3] mb-5 animate-fade-in-delay-1">
               受付業務を<span className="bg-[var(--brand-teal-light)] px-1">AIで自動化</span>。
               <br />
-              予約電話を逃さない、
+              電話もチャットも逃さない、
               <br />
               患者満足度が上がる
             </h1>
 
             {/* Supporting Text */}
             <p className="text-[15px] md:text-base text-[var(--text-medium)] leading-[1.7] mb-8 max-w-[520px] animate-fade-in-delay-2">
-              診療中の電話対応、休診日の予約受付、スタッフ不足...
+              診療中の電話対応、休診日の予約受付、ウェブからの問い合わせ対応...
               <br />
-              AI音声受付が自然な日本語で応答し、予約を自動管理。
+              AI音声受付とチャットボットが自然な日本語で応答し、予約を自動管理。
               <br />
               忙しいクリニックの業務効率化を実現します。
             </p>
 
             {/* Benefit Circles */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8 animate-fade-in-delay-3">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 md:gap-4 mb-8 animate-fade-in-delay-3">
               <BenefitCircle 
                 icon={<PhoneIcon />}
                 text="24時間365日対応"
+              />
+              <BenefitCircle 
+                icon={<ChatbotIcon />}
+                text="電話＆チャット"
               />
               <BenefitCircle 
                 icon={<CalendarIcon />}
@@ -173,6 +177,19 @@ function SpeechIcon() {
       <path d="M8 10h.01" />
       <path d="M12 10h.01" />
       <path d="M16 10h.01" />
+    </svg>
+  );
+}
+
+function ChatbotIcon() {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="3" width="18" height="14" rx="2" />
+      <path d="M8 21h8" />
+      <path d="M12 17v4" />
+      <circle cx="8" cy="10" r="1" fill="currentColor" />
+      <circle cx="16" cy="10" r="1" fill="currentColor" />
+      <path d="M9 13c.6.9 1.6 1.5 3 1.5s2.4-.6 3-1.5" />
     </svg>
   );
 }

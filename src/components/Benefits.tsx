@@ -19,6 +19,11 @@ export function Benefits() {
       benefits: ["自然な日本語で応答", "予約システムと連携可能", "ダブルブッキング防止"],
       stat: "📊 音声認識精度95%以上の自然な会話",
     },
+    {
+      label: "ウェブチャット",
+      benefits: ["ホームページに簡単設置", "Instagram連携対応", "よくある質問を自動回答"],
+      stat: "📊 ウェブからの問い合わせ対応を80%自動化",
+    },
   ];
 
   return (
@@ -26,7 +31,7 @@ export function Benefits() {
       <div className="max-w-[1200px] mx-auto px-5 md:px-8 lg:px-10">
         {/* Section Headline */}
         <h2 className="text-[28px] md:text-[32px] lg:text-[36px] font-bold text-[var(--brand-teal)] text-center mb-10 md:mb-12 lg:mb-14">
-          AI音声受付で実現できること
+          AI音声受付＆チャットボットで実現できること
         </h2>
 
         {/* Two Column Layout */}
