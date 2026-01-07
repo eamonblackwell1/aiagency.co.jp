@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
-import { ChatWidgetFix } from "@/components/ChatWidgetFix";
+// import Script from "next/script";
+// import { ChatWidgetFix } from "@/components/ChatWidgetFix";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -29,12 +29,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
-        <ChatWidgetFix />
-        <Script
+        {/* <ChatWidgetFix /> */}
+        {/* <Script
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
           data-widget-id="6959f675e056fe797a0d3ac4"
-        />
+        /> */}
       </body>
     </html>
   );
