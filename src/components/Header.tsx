@@ -20,8 +20,8 @@ export function Header() {
 
   const navItems = [
     { label: "製品", href: "#product" },
-    { label: "料金", href: "#pricing" },
-    { label: "Information", href: "#info" },
+    // { label: "料金", href: "#pricing" },
+    // { label: "Information", href: "#info" },
     { label: "お問い合わせ", href: "#contact" },
   ];
 
@@ -84,14 +84,14 @@ export function Header() {
 
             {/* Right Side - CTA Buttons - Desktop */}
             <div className="hidden md:flex items-center gap-3">
-              <Link href="#download" className="btn-primary">
+              {/* <Link href="#download" className="btn-primary">
                 資料ダウンロード
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
                   <polyline points="7 10 12 15 17 10" />
                   <line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
-              </Link>
+              </Link> */}
               <Link href="#contact" className="btn-secondary">
                 お問い合わせ
               </Link>
@@ -168,7 +168,7 @@ export function Header() {
               ))}
               
               {/* Mobile CTA Button */}
-              <div className="p-6">
+              {/* <div className="p-6">
                 <Link 
                   href="#download" 
                   onClick={() => setMobileMenuOpen(false)}
@@ -181,7 +181,7 @@ export function Header() {
                     <line x1="12" y1="15" x2="12" y2="3" />
                   </svg>
                 </Link>
-              </div>
+              </div> */}
             </nav>
           </div>
         </>
