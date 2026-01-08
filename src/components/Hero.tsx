@@ -15,7 +15,7 @@ export function Hero() {
             {/* Badge */}
             <div className="mb-6 animate-fade-in">
               <span className="inline-block bg-[var(--brand-teal)] text-white text-sm font-semibold px-4 py-2 rounded">
-                歯科医院向け
+                クリニック・サロン向け
               </span>
             </div>
 
