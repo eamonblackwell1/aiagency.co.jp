@@ -37,7 +37,7 @@ export default function CompanyPage() {
                 
                 <div className="border-b border-gray-100 pb-4">
                   <dt className="text-sm font-semibold text-[var(--text-medium)] mb-1">事業内容</dt>
-                  <dd className="text-base text-[var(--text-dark)]">AI音声受付システムの開発・提供</dd>
+                  <dd className="text-base text-[var(--text-dark)]">サロン・クリニック向けAI受付/チャットソリューションの開発・提供</dd>
                 </div>
                 
                 <div>

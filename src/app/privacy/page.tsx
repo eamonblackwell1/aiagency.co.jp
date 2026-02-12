@@ -23,7 +23,7 @@ export default function PrivacyPage() {
                 当社は、サービスの提供にあたり、以下の情報を収集することがあります：
               </p>
               <ul className="list-disc pl-6 text-[var(--text-medium)] mb-4 space-y-2">
-                <li>氏名、クリニック名</li>
+                <li>氏名、クリニック名・店舗名</li>
                 <li>メールアドレス、電話番号</li>
                 <li>お問い合わせ内容</li>
                 <li>サービス利用に関する情報</li>

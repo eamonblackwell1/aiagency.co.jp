@@ -59,11 +59,11 @@ export async function POST(request: NextRequest) {
       html: `
         <h2>新しいお問い合わせが届きました</h2>
         <p><strong>送信日時:</strong> ${data.timestamp}</p>
-        <p><strong>クリニック名:</strong> ${data.clinicName}</p>
+        <p><strong>クリニック名・店舗名:</strong> ${data.clinicName}</p>
         <p><strong>お名前:</strong> ${data.name}</p>
         <p><strong>メール:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
         <p><strong>電話番号:</strong> ${data.phone}</p>
-        <p><strong>月間患者数:</strong> ${data.avgPatients}</p>
+        <p><strong>1日の平均来客数:</strong> ${data.avgPatients}</p>
         <p><strong>受付体制:</strong> ${data.receptionSetup}</p>
         <p><strong>導入時期:</strong> ${data.timeline}</p>
         <p><strong>メッセージ:</strong></p>

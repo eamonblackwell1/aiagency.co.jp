@@ -25,16 +25,16 @@ export function Hero() {
               <br />
               電話もチャットも逃さない、
               <br />
-              患者満足度が上がる
+              患者様・お客様満足度が上がる
             </h1>
 
             {/* Supporting Text */}
             <p className="text-[15px] md:text-base text-[var(--text-medium)] leading-[1.7] mb-8 max-w-[520px] animate-fade-in-delay-2">
-              診療中の電話対応、休診日の予約受付、ウェブからの問い合わせ対応...
+              クリニック、サロン、スパ、ヘッドスパの予約受付を一元化。
               <br />
-              AI音声受付とチャットボットが自然な日本語で応答し、予約を自動管理。
+              診療中・施術中の電話対応や営業時間外の問い合わせも、AI音声受付とチャットボットが自然な日本語で対応。
               <br />
-              忙しいクリニックの業務効率化を実現します。
+              忙しい貴院・貴店・貴社の業務効率化と機会損失防止を実現します。
             </p>
 
             {/* Benefit Circles */}
@@ -72,25 +72,7 @@ export function Hero() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-delay-3">
-              {/* Download Button */}
-              <div className="flex flex-col items-center sm:items-start">
-                <span className="inline-block bg-[var(--yellow-badge)] text-[var(--text-dark)] text-[13px] font-bold px-3 py-1.5 rounded-full mb-2">
-                  今すぐ確認！
-                </span>
-                <Link 
-                  href="#download"
-                  className="w-full sm:w-[240px] inline-flex items-center justify-center gap-2 bg-[var(--btn-black)] text-white text-base font-semibold px-8 py-4 rounded-lg hover:bg-[var(--btn-black-hover)] hover:-translate-y-0.5 hover:shadow-lg transition-all duration-200"
-                >
-                  資料ダウンロード
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-                    <polyline points="7 10 12 15 17 10" />
-                    <line x1="12" y1="15" x2="12" y2="3" />
-                  </svg>
-                </Link>
-              </div>
-
+            <div className="flex animate-fade-in-delay-3">
               {/* Contact Button */}
               <div className="flex flex-col items-center sm:items-start">
                 <span className="inline-block bg-[var(--yellow-badge)] text-[var(--text-dark)] text-[13px] font-bold px-3 py-1.5 rounded-full mb-2">

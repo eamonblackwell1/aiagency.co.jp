@@ -165,7 +165,7 @@ export function ContactForm() {
             お問い合わせ
           </h2>
           <p className="text-base text-[var(--text-medium)]">
-            まずは無料相談から。貴院に最適な導入プランをご提案します。
+            まずは無料相談から。貴院・貴店・貴社に最適な導入プランをご提案します。
           </p>
         </div>
 
@@ -174,10 +174,10 @@ export function ContactForm() {
           <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
             {/* Clinic Name */}
             <FormField
-              label="クリニック名"
+              label="クリニック名・店舗名"
               name="clinicName"
               type="text"
-              placeholder="例: 表参道デンタルクリニック"
+              placeholder="例: 表参道デンタルクリニック / 銀座ヘッドスパ"
               value={formData.clinicName}
               onChange={handleChange}
               error={errors.clinicName}
@@ -222,7 +222,7 @@ export function ContactForm() {
 
             {/* Average Patients */}
             <SelectField
-              label="1日の平均患者数"
+              label="1日の平均来客数"
               name="avgPatients"
               value={formData.avgPatients}
               onChange={handleChange}
