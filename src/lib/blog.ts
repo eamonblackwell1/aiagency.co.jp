@@ -95,6 +95,16 @@ function extractField(section: string, label: string) {
   return regex.exec(section)?.[1]?.trim();
 }
 
+function extractFieldFromLabels(section: string, labels: string[]) {
+  for (const label of labels) {
+    const value = extractField(section, label);
+    if (value) {
+      return value;
+    }
+  }
+  return undefined;
+}
+
 function parseCsvLine(value?: string) {
   if (!value) {
     return [];
@@ -149,7 +159,9 @@ function parseCustomMarkdown(raw: string, fileName: string): ParsedPost {
   const footer = sections[2] ?? "";
 
   const titleFromBody = bodyMarkdown.match(/^#\s+(.+)$/m)?.[1]?.trim();
-  const title = extractField(header, "Title \\(H1\\)") ?? titleFromBody;
+  const title =
+    extractFieldFromLabels(header, ["Title \\(H1\\)", "タイトル \\(H1\\)"]) ??
+    titleFromBody;
   const slug =
     extractField(header, "Suggested URL slug") ??
     (title ? slugify(title) : slugify(fileName.replace(/\.md$/, "")));
@@ -219,7 +231,8 @@ function normalizePost(parsed: ParsedPost, fileName: string): BlogPostPreview & 
   internalLinkSuggestions: string[];
   faqs: BlogFaq[];
 } {
-  const title = parsed.title ?? fileName.replace(/\.md$/, "");
+  const title =
+    parsed.title ?? fileName.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, "");
   const slug = parsed.slug ?? slugify(title);
   const description = parsed.description ?? fallbackDescription(parsed.bodyMarkdown);
   const excerpt = fallbackDescription(parsed.bodyMarkdown);
