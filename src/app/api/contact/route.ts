@@ -1,4 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
+import { Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+const NOTIFICATION_EMAIL = "info@aiagency.co.jp";
 
 interface ContactFormData {
   clinicName: string;
@@ -45,22 +50,34 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Log the submission (in production, you'd save to database or send email)
-    console.log("=== New Contact Form Submission ===");
-    console.log("Timestamp:", data.timestamp);
-    console.log("Clinic Name:", data.clinicName);
-    console.log("Name:", data.name);
-    console.log("Email:", data.email);
-    console.log("Phone:", data.phone);
-    console.log("Avg Patients:", data.avgPatients);
-    console.log("Reception Setup:", data.receptionSetup);
-    console.log("Timeline:", data.timeline);
-    console.log("Message:", data.message || "(No message)");
-    console.log("===================================");
+    // Send email to info@aiagency.co.jp
+    const { error } = await resend.emails.send({
+      from: "AI Agency <contact@aiagency.co.jp>",
+      to: [NOTIFICATION_EMAIL],
+      replyTo: data.email,
+      subject: `新規お問い合わせ: ${data.clinicName} - ${data.name}`,
+      html: `
+        <h2>新しいお問い合わせが届きました</h2>
+        <p><strong>送信日時:</strong> ${data.timestamp}</p>
+        <p><strong>クリニック名:</strong> ${data.clinicName}</p>
+        <p><strong>お名前:</strong> ${data.name}</p>
+        <p><strong>メール:</strong> <a href="mailto:${data.email}">${data.email}</a></p>
+        <p><strong>電話番号:</strong> ${data.phone}</p>
+        <p><strong>月間患者数:</strong> ${data.avgPatients}</p>
+        <p><strong>受付体制:</strong> ${data.receptionSetup}</p>
+        <p><strong>導入時期:</strong> ${data.timeline}</p>
+        <p><strong>メッセージ:</strong></p>
+        <p>${data.message || "(なし)"}</p>
+      `,
+    });
 
-    // TODO: Integrate with email service (e.g., Resend, SendGrid)
-    // TODO: Store in database (e.g., Supabase)
-    // TODO: Send confirmation email to user
+    if (error) {
+      console.error("Resend error:", error);
+      return NextResponse.json(
+        { error: "Failed to send email" },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
       { 
