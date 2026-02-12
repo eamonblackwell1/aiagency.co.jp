@@ -2,6 +2,7 @@ import Link from "next/link";
 
 export function Footer() {
   const footerLinks = [
+    { label: "ブログ", href: "/blog" },
     { label: "会社情報", href: "/company" },
     { label: "利用規約", href: "/terms" },
     { label: "プライバシーポリシー", href: "/privacy" },

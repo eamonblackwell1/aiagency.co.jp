@@ -19,10 +19,11 @@ export function Header() {
   }, [mobileMenuOpen]);
 
   const navItems = [
-    { label: "製品", href: "#product" },
+    { label: "製品", href: "/#product" },
+    { label: "Blog", href: "/blog" },
     // { label: "料金", href: "#pricing" },
     // { label: "Information", href: "#info" },
-    { label: "お問い合わせ", href: "#contact" },
+    { label: "お問い合わせ", href: "/#contact" },
   ];
 
   return (
@@ -92,7 +93,7 @@ export function Header() {
                   <line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
               </Link> */}
-              <Link href="#contact" className="btn-secondary">
+              <Link href="/#contact" className="btn-secondary">
                 お問い合わせ
               </Link>
             </div>
@@ -100,7 +101,7 @@ export function Header() {
             {/* Mobile: CTA + Hamburger */}
             <div className="flex md:hidden items-center gap-2">
               <Link 
-                href="#contact" 
+                href="/#contact" 
                 className="inline-flex items-center justify-center px-4 py-2 bg-[var(--brand-teal)] text-white text-[13px] font-semibold rounded-full whitespace-nowrap hover:bg-[var(--brand-teal-hover)] transition-colors"
               >
                 お問い合わせ
