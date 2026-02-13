@@ -39,6 +39,23 @@ export default function TrustDentalDemo() {
             </svg>
             Click the chat widget to start a conversation
           </div>
+
+          {/* YouTube Video Embed */}
+          <div className="w-full max-w-2xl mx-auto mb-12">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/0zk18ysiPc0?si=0p3J_5rcoZOUL2bE" 
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
