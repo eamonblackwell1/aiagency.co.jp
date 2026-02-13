@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Agency Japan | Voice AI Receptionist",
-  description: "AI-powered voice agents for after-hours and overflow calls. Never miss a customer again.",
-  keywords: ["AI receptionist", "voice AI", "Japan", "after hours", "customer service", "automation"],
+  title: "AI Agency Japan | Voice AI & Chatbot Solutions",
+  description: "AI-powered voice agents and chatbots for after-hours and overflow calls. Never miss a customer again.",
+  keywords: ["AI receptionist", "voice AI", "chatbot", "Japan", "after hours", "customer service", "automation"],
 };
 
 export default function RootLayout({
