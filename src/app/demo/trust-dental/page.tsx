@@ -63,7 +63,7 @@ export default function TrustDentalDemo() {
       <Script 
         src="https://widgets.leadconnectorhq.com/loader.js"
         data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
-        data-widget-id="6969ad6f572f85ee411b8e24"
+        data-widget-id="698e9bc17c2a754230f05f61"
         strategy="lazyOnload"
       />
     </>
