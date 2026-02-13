@@ -1,5 +1,6 @@
 import Script from 'next/script';
 import type { Metadata } from 'next';
+import { ChatWidgetFix } from '@/components/ChatWidgetFix';
 
 export const metadata: Metadata = {
   title: 'Trust Dental Clinic — AI Receptionist Demo',
@@ -9,6 +10,8 @@ export const metadata: Metadata = {
 export default function TrustDentalDemo() {
   return (
     <>
+      <ChatWidgetFix />
+      
       <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4 py-12">
         <div className="max-w-3xl w-full text-center">
           {/* Headline */}
