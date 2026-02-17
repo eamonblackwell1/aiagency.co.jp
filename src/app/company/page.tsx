@@ -2,6 +2,19 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export default function CompanyPage() {
+  const companyInfo = [
+    { label: "会社名", value: "有限会社グローバルスペース (Global Space LLC)" },
+    { label: "屋号", value: "AI Agency Japan" },
+    { label: "所在地", value: "東京都目黒区緑が丘二丁目12番3号" },
+    { label: "代表者", value: "渡辺泰三" },
+    { label: "設立", value: "1991年9月6日" },
+    {
+      label: "事業内容",
+      value: "サロン・クリニック向けAIコミュニケーションサービスの提供",
+    },
+    { label: "URL", value: "https://aiagency.co.jp" },
+  ];
+
   return (
     <>
       <Header />
@@ -12,42 +25,25 @@ export default function CompanyPage() {
             <h1 className="text-[28px] md:text-[36px] font-bold text-[var(--text-dark)] mb-8">
               会社概要
             </h1>
-            
-            <div className="bg-white rounded-xl shadow-sm p-6 md:p-10">
-              <dl className="space-y-6">
-                <div className="border-b border-gray-100 pb-4">
-                  <dt className="text-sm font-semibold text-[var(--text-medium)] mb-1">会社名</dt>
-                  <dd className="text-base text-[var(--text-dark)]">GLOBAL SPACE Co., Ltd. (グローバルスペース株式会社)</dd>
-                </div>
-                
-                <div className="border-b border-gray-100 pb-4">
-                  <dt className="text-sm font-semibold text-[var(--text-medium)] mb-1">代表者</dt>
-                  <dd className="text-base text-[var(--text-dark)]">[代表者名]</dd>
-                </div>
-                
-                <div className="border-b border-gray-100 pb-4">
-                  <dt className="text-sm font-semibold text-[var(--text-medium)] mb-1">所在地</dt>
-                  <dd className="text-base text-[var(--text-dark)]">〒xxx-xxxx 東京都[住所]</dd>
-                </div>
-                
-                <div className="border-b border-gray-100 pb-4">
-                  <dt className="text-sm font-semibold text-[var(--text-medium)] mb-1">設立</dt>
-                  <dd className="text-base text-[var(--text-dark)]">[設立日]</dd>
-                </div>
-                
-                <div className="border-b border-gray-100 pb-4">
-                  <dt className="text-sm font-semibold text-[var(--text-medium)] mb-1">事業内容</dt>
-                  <dd className="text-base text-[var(--text-dark)]">サロン・クリニック向けAI受付/チャットソリューションの開発・提供</dd>
-                </div>
-                
-                <div>
-                  <dt className="text-sm font-semibold text-[var(--text-medium)] mb-1">お問い合わせ</dt>
-                  <dd className="text-base text-[var(--text-dark)]">
-                    <p>TEL: xxx-xxxx-xxxx</p>
-                    <p>Email: info@aiagency.co.jp</p>
-                  </dd>
-                </div>
-              </dl>
+
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+              <table className="w-full border-collapse">
+                <tbody>
+                  {companyInfo.map((item) => (
+                    <tr key={item.label} className="border-b border-gray-100 last:border-b-0">
+                      <th
+                        scope="row"
+                        className="w-[34%] px-5 py-4 md:px-8 md:py-5 text-left text-sm font-semibold text-[var(--text-medium)] align-top bg-gray-50/70"
+                      >
+                        {item.label}
+                      </th>
+                      <td className="px-5 py-4 md:px-8 md:py-5 text-base text-[var(--text-dark)] break-words">
+                        {item.value}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
