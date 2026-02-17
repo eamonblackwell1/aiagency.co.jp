@@ -14,9 +14,12 @@ export function Footer() {
       <div className="max-w-[1200px] mx-auto px-5 md:px-10 py-6 md:py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
-          <p className="text-sm text-[#6b7280] order-2 md:order-1">
-            © AI Agency Japan
-          </p>
+          <div className="order-2 md:order-1 text-center md:text-left">
+            <p className="text-sm text-[#6b7280]">© AI Agency Japan</p>
+            <p className="text-xs text-[#6b7280] mt-1">
+              Operated by 有 限 会 社 グ ロ ー バ ル ス ペ ー ス
+            </p>
+          </div>
 
           {/* Navigation Links */}
           <nav className="flex flex-wrap justify-center items-center gap-x-1 gap-y-2 order-1 md:order-2">
